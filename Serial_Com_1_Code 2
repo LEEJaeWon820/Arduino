@@ -1,1 +1,14 @@
+void setup(){
+   Serial.begin(9600);
+   Serial.print("안녕하세요!!");
+   Serial.print("안녕하세요!!");
+}
 
+
+void loop(){
+
+
+}
+---
+출력
+안녕하세요!!안녕하세요!!
