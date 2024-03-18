@@ -2,17 +2,16 @@
 // MAX DISTANCE 수정 전
 // ---------------------------------------------------------------------------
 
-#include <NewPing.h> // Newping 라이브러리를 추가
+#include <NewPing.h>
 
-#define TRIGGER_PIN  2  // 트리거 핀을 2번으로 정의
-#define ECHO_PIN     3  // 에코 핀을 3번으로 정의
-#define MAX_DISTANCE 100 // 최대 거리를 100으로 정의 
+#define TRIGGER_PIN  2  // Arduino pin tied to trigger pin on the ultrasonic sensor.
+#define ECHO_PIN     3  // Arduino pin tied to echo pin on the ultrasonic sensor.
+#define MAX_DISTANCE 100 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
 
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); 
-//TriggerPin과 EchoPin과 최대제한거리의 값을 선언합니다.
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
 void setup() {
-  Serial.begin(115200); // 115200의 속도로 시작
+  Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
 }
 
 void loop() {
